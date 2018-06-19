@@ -1,0 +1,15 @@
+current directory: /mnt/c/Users/Aaron/Desktop/Rails/nameofapp/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+/usr/bin/ruby2.4 -r ./siteconf20180616-72-1jswii9.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/Users/Aaron/Desktop/Rails/nameofapp/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /mnt/c/Users/Aaron/Desktop/Rails/nameofapp/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /mnt/c/Users/Aaron/Desktop/Rails/nameofapp/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20180616-72-1vvy6fq

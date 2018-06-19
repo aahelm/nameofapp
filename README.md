@@ -1,0 +1,3 @@
+# README
+
+This README is about my project, nameofapp, that I started in 3.6. My name is Aaron Helm and this is my first Ruby on Rails project. I have no idea what it will become...
