@@ -9,6 +9,10 @@ h1 {
   color: blue;
 }
 
+#nav {
+  color: white;
+}
+
 
 .navbar {
   background-color: #d966ff;
@@ -19,11 +23,21 @@ h1 {
 #nav ul li {
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: black !important;
   font-size: 160%;
 }
 
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin-bottom: 75px;
+}
+
 footer {
+  position: absolute;
   height: 75px;
+  bottom: 0;
   background: #d9e6f2;
 }
