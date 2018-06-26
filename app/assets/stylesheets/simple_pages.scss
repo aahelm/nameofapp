@@ -9,10 +9,13 @@ h1 {
   color: blue;
 }
 
+<<<<<<< HEAD
+=======
 #nav {
   color: white;
 }
 
+>>>>>>> b96da9f6fcc5de7a1860840666d881331ff5f458
 
 .navbar {
   background-color: #d966ff;
@@ -23,6 +26,14 @@ h1 {
 #nav ul li {
   text-transform: uppercase;
   letter-spacing: 0.06em;
+<<<<<<< HEAD
+  color: black !important;
+  font-size: 160%;
+}
+
+footer {
+  height: 75px;
+=======
   font-size: 160%;
 }
 
@@ -40,5 +51,6 @@ footer {
   height: 75px;
   width: 100%;
   bottom: 0;
+>>>>>>> b96da9f6fcc5de7a1860840666d881331ff5f458
   background: #d9e6f2;
 }
