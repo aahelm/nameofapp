@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
-end
 
-def show
+  def index
+  end
+
+  def show
   end
 
   def new
@@ -12,5 +14,5 @@ def show
 
   def destroy
   end
-  
+
 end
