@@ -34,6 +34,15 @@
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
           </ul>
         </div> <!-- nav -->
+        <form class="navbar-form pull-right" role="search">
+        <div class="input-group" id="search">
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.label :q, 'Search for:' %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search' %>
+            <% end %>
+        </div>
+        </form>
       </div> <!-- end nav container-->
     </nav> <!-- end navbar-->
 
