@@ -16,6 +16,9 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -36,6 +39,17 @@
               <%= form.label :q, 'Search for:' %>
               <%= form.text_field :q, id: 'q', value: params[:q] %>
               <%= form.submit 'Search' %>
+            <% end %></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+            </li>
+            <% else %>
+            <li class="nav-item">
+              <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+
             <% end %></li>
           </ul>
         </div> <!-- nav -->
