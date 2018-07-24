@@ -19,7 +19,7 @@
   <% if notice %>
     <p id="notice" class="alert alert-primary"><%= notice %></p>
   <% end %>
-  
+
   <% if alert %>
     <p id="alert" class="alert alert-primary"><%= alert %></p>
   <% end %>
@@ -40,6 +40,7 @@
             <li><%= link_to "Home", simple_pages_landing_page_path %></li>
             <li><%= link_to "About", simple_pages_about_path %></li>
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
+            <li><%= link_to "Products", products_path %></li>
             <li><%= form_with(url: products_path, method: 'get', local: true, class: "<navbar-form pull right>", id: "search") do |form| %>
               <%= form.label :q, 'Search for:' %>
               <%= form.text_field :q, id: 'q', value: params[:q] %>

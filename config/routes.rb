@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+  
   resources :users
-  resources :products
+
+  resources :products do
+    resources :comments
+  end
+
   resources :orders, only: [:index, :show, :create, :destroy]
   resources :users, except: [:index]
   get 'simple_pages/about'
