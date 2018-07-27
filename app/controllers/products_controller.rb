@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.limit(3)
     end
+    
   end
 
   # GET /products/1
