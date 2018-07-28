@@ -10,13 +10,14 @@ class ProductsController < ApplicationController
     else
       @products = Product.limit(3)
     end
-    
+
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
      @comments = @product.comments.order("created_at DESC")
+     @comments = Comment.paginate(:page => params[:page], :per_page => 3)
   end
 
   # GET /products/new
