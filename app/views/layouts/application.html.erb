@@ -40,7 +40,15 @@
             <li><%= link_to "Home", simple_pages_landing_page_path %></li>
             <li><%= link_to "About", simple_pages_about_path %></li>
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
-            <li><%= link_to "Products", products_path %></li>
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/products" role="button" aria-haspopup="true" aria-expanded="false">
+                Products <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/products/5">City Bike</a></li>
+                <li><a href="/products/6">Mountain Bike</a></li>
+                <li><a href="/products/7">Beach Bike</a></li>
+              </ul>
             <li><%= form_with(url: products_path, method: 'get', local: true, class: "<navbar-form pull right>", id: "search") do |form| %>
               <%= form.label :q, 'Search for:' %>
               <%= form.text_field :q, id: 'q', value: params[:q] %>

@@ -1,7 +1,8 @@
 class Product < ApplicationRecord
   has_many :comments
+  has_many :orders
   validates :name, presence: true
-  
+
 
 def self.search(search_term)
   if Rails.env.development?
