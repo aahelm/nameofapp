@@ -41,6 +41,8 @@ gem 'devise'
 
 gem 'cancancan', '~> 2.0'
 
+gem 'stripe'
+
 gem 'rails-controller-testing'
 
 
