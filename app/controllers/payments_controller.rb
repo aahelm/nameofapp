@@ -9,7 +9,7 @@ class PaymentsController < ApplicationController
 
     begin
       charge = Stripe::Charge.create(
-        :amount => (@product.price),
+        :amount => (@product.price/1.to_f),
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail],
@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
       )
       if charge.paid
         Order.create(product_id: @product.id, user_id: @user.id,
-      total: @product.price)
+      total: @product.price/1.to_f)
       end
 
     rescue Stripe::CardError => e
