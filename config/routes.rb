@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   resources :users
 
   resources :products do
     resources :comments
   end
+
+  post 'payments/create'
 
   resources :orders, only: [:index, :show, :create, :destroy]
   resources :users, except: [:index]
