@@ -1,4 +1,11 @@
 $(document).on('turbolinks:load', function(){
+  $('.img-zoom').elevateZoom({
+      zoomWindowFadeIn: 500,
+      zoomWindowFadeOut: 500,
+      lensFadeIn: 500,
+      lensFadeOut: 500
+    });
+
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
