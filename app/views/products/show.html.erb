@@ -1,51 +1,53 @@
-<p id="notice"><%= notice %></p>
-<%= @product.views %>
+<div class="container">
+  <div class="show-product" data-product-id="<%= @product.id %>">
+    <div class="thumbnail">
+      <p><span class="badge badge-info"> Views <%= @product.views %></span></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.product_image.url") %>
-</p>
+      <p>
+        <strong>Image url:</strong>
+        <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.product_image.url") %>
+      </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+      <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-
-<%= form_with(url: '/payments/create') do |form| %>
-<%= hidden_field_tag(:product_id, @product.id) %>
-<%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
-
-<p>Average Rating: <div id="#average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-
-<%= @product.highest_rating_comment %>
-
-<%= @product.lowest_rating_comment %>
-
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-<%= render 'new_comment' %>
-
-<%= render 'comments' %>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
 
 
+      <%= form_with(url: '/payments/create') do |form| %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
 
+      <p>Average Rating: <div id="#average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
+      <%= @product.highest_rating_comment %>
+
+      <%= @product.lowest_rating_comment %>
+
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
+      <%= render 'new_comment' %>
+
+      <%= render 'comments' %>
+    </div>
+  </div>
+</div>
 
 
 
