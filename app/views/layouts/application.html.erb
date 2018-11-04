@@ -45,9 +45,9 @@
                 Products <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="/products/5">City Bike</a></li>
-                <li><a href="/products/6">Mountain Bike</a></li>
-                <li><a href="/products/7">Beach Bike</a></li>
+                <% @products.each do |product| %>
+                <li><%= link_to product.name, product %></li>
+                <% end %>
               </ul>
             <li><%= form_with(url: products_path, method: 'get', local: true, class: "<navbar-form pull right>", id: "search") do |form| %>
               <%= form.label :q, 'Search for:' %>
